@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    background: #000;
+}
+
+#gameScene{
+    border: 1px solid#ccc;
+    width: 1200px;
+    height: 600px;
+    transform: scale(0.9);
+    margin: 10px auto;
+
+    background: #8acee1;
+    position: relative;
+
+    overflow: hidden;
+}
+
+#vidStart{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+.sky {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(img/stage/sky.jpg)repeat-x;
+    background-size: 1038px;
+    width: 300%;
+    height: 100%;
+
+    animation: moveX 40s infinite alternate;
+
+}
+
+.rock{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background: url(img/stage/rock.png)repeat-x;
+    background-size: 1038px;
+    width: 300%;
+    height: 84%;
+
+    animation: moveX 27s infinite alternate ;
+}
+
+#ground{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background: url(img/stage/ground.jpg)repeat-x;
+    background-size: 1408px;
+    width: 1000%;
+    height: 40%;
+
+    animation: moveX 7s infinite alternate linear;
+}
+
+
+@keyframes moveX{
+
+    0%{
+        left:0;
+    }
+
+    100%{
+        left: -200%;
+    }
+
+
+}
