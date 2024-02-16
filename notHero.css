@@ -1,0 +1,474 @@
+body{
+    direction: rtl;
+    background: black;
+}
+    @font-face{
+        src:url(fonts/Aban.ttf);
+        font-family:"aban";
+    }
+    @font-face{
+        src:url(fonts/Kokab.ttf);
+        font-family:"kokab";
+    }
+    @font-face{
+        src:url(fonts/Mitra.ttf);
+        font-family:"mitra";
+    }
+    @font-face{
+        src:url(fonts/Mj\ flow.ttf);
+        font-family: "mj";
+    }
+    @font-face{
+        src:url(fonts/nasim.ttf);
+        font-family:"nasim";
+    }
+    @font-face{
+        src:url(fonts/Ramsar.ttf);
+        font-family:"ramsar";
+    }
+    
+    @font-face{
+        src:url(fonts/Roya.ttf);
+        font-family:"roya";
+    }
+    @font-face{
+        src:url(fonts/Thuluth.ttf);
+        font-family:"th";
+    }
+    @font-face{
+        src:url(fonts/Traffic.ttf);
+        font-family:"tra";
+    }
+    @font-face{
+        src:url(fonts/Yekan.ttf);
+        font-family:"yekan";
+    }
+    
+
+
+
+#gameScene{
+    width: 1200px;
+    height: 600px;
+    margin: 40px auto;
+    /* border: 1px solid black; */
+    overflow: hidden;
+    font-family: aban;
+    position: relative;
+}
+#gameStart{
+    width: 100%;
+    height: 100%;
+    background: url(img/home/BG.jpg)no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid transparent;
+}
+
+#playBtn{
+    background: url(img/home/Play.png) no-repeat 50% 50%;
+    background-size: 111% 111%;
+    width: 180px;
+    height: 160px;
+    margin: 290px auto;
+    cursor: pointer;
+    transition: 0.4s;
+    /* border: 1PX SOLID RED; */
+}
+#playBtn:hover{
+    transform: scale(1.12);
+}
+
+#phone{
+    background: url(img/home/Phone.png) no-repeat ;
+    background-size: 100% 100%;
+    width: 100px;
+    height: 125px;
+    position:absolute;
+    top: 10px;
+    right:20px;
+    cursor: pointer; 
+    transition: 0.5s;
+}
+#phone:hover{
+    transform: scale(1.05);
+}
+#setting{
+    background: url(img/home/setting.png) no-repeat ;
+    background-size: 100% 100%;
+    width: 125px;
+    height: 125px;
+    position:absolute;
+    bottom:10px;
+    right:20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#setting:hover{
+transform: scale(1.05)
+}
+#market{
+    background: url(img/home/Shop.png) no-repeat ;
+    background-size: 100% 100%;
+    width: 130px;
+    height: 130px;
+    position:absolute;
+    bottom:10px;
+    left:20px;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+#market:hover{
+    transform:scale(1.05) ;
+}
+#offer{
+    background: url(img/home/Cash.png) no-repeat ;
+    background-size: 100% 100%;
+    width: 130px;
+    height: 130px;
+    position:absolute;
+    top: 10px;
+    left:20px;
+    transition: 0.5s;
+    cursor: pointer;
+
+}
+#offer:hover{
+    transform:scale(1.05) ;
+}
+.hide{
+	display:none;	
+}
+.show{
+	display:block !important;	
+}
+#gameMenu{
+
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 10px auto;
+
+}
+
+.bg{
+    position: absolute;
+    background: url(img/slider/BG.jpg) repeat-x;
+    background-size:100% 100% ;
+    width:300%;
+    height: 100%;
+    animation: moveX 50s infinite alternate linear;
+    left: 0;
+    bottom: 0;
+
+
+}    
+@keyframes moveX{
+
+    0%{
+        left:0;
+    }
+    
+    100%{
+        left: -200%;
+    }
+    
+    
+    }
+
+#back{
+    background: url(img/slider/Back.png) no-repeat;
+    background-size: 100% 100% ;
+    width: 150px;
+    height: 50px;    
+    position: absolute;
+    left: 10px;
+    top:10px;
+    cursor: pointer;
+    transition: 0.6s;
+    display:none;
+    z-index: 10;
+}
+#back:hover{
+transform: scale(1.05);
+}
+
+#tab{
+    border: 1px solid transparent;
+    color: #fff;
+    list-style: none;
+    margin: 0;
+    position: absolute;
+
+
+}
+
+#tab > li{
+    text-align: center;
+    line-height:0px;
+    float: right;
+    margin-top: 170px;
+    transition: 0.5s;
+    /* border: 1px solid red; */
+    margin-right: 30px;
+    cursor: pointer;
+    
+}
+
+#tab > li > .im1{
+    width:390px;
+    height:299px;
+
+}
+#tab > li > .im2{
+    width:299px;
+    height:292px;
+
+}
+#tab > li > .im3{
+    width:299px;
+    height:292px;
+}
+#tab > li > .n1{
+    margin-left: 50px;
+    margin-top: 0px;
+}
+#tab > li > .n2{
+    margin-left: -20px;
+    margin-top: 0px;
+}
+#tab > li > .n3{
+    margin-left: -50px;
+    margin-top: 0px;
+}
+#tab > li.big{
+    transition: 0.5s;
+	transform:scale(1.35);
+
+} 
+
+#tab > li.small{
+    transition: 0.5s;
+	transform:scale(0.7);
+	opacity:0.5;
+    font-size: 20px;    
+} 
+
+#gameLevel{
+    margin: 0;
+    background-size: 1200px 600px;
+    position: absolute;
+
+}
+.bg{
+    position: absolute;
+    background: url(img/slider/BG.jpg) repeat-x;
+    background-size:100% 100% ;
+    width:300%;
+    height: 100%;
+    animation: moveX 50s infinite alternate linear;
+    left: 0;
+    bottom: 0;
+
+
+}    
+@keyframes moveX{
+
+    0%{
+        left:0;
+    }
+    
+    100%{
+        left: -200%;
+    }
+    
+    
+    }
+
+#gameLevel{
+    /* border: 1px solid#070606; */
+    width: 1200px;
+    height: 600px;
+    margin: auto;
+}
+
+#gameLevel>#exitBtn{
+    /* border: 1px solid #ccc; */
+    width: 150px;
+    height: 50px;
+
+    background: url(img/slider/Back.png)no-repeat;
+    background-size: 160px;
+    position: relative;
+    right: 1020px;
+    top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 10;
+}
+#gameLevel>#exitBtn:hover{
+    transform: scale(1.06);
+}
+#gameLevel>.market{
+    /* border: 1px solid #ccc; */
+    width: 220px;
+    height: 75px;
+    background: url(img/slider/Store.png)no-repeat;
+    background-size: 210px;
+    position: relative;
+    right:20px;
+    top: -40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#gameLevel>.market:hover{
+    transform: scale(1.04);
+}
+
+#miniSlider {
+    /* border: 1px solid #ccc; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+    #miniSlider > #miniGal {
+    /* border:1px solid black; */
+    width: 830%;
+    height: 70%;
+
+    transition: 0.5s;
+    position: absolute;
+    left: 0%;
+    top: -40px;
+}
+
+    #miniSlider > #miniGal > .miniItems {
+
+    width: 424px;
+    height: 71%;
+
+    float: left;
+    direction: rtl;
+
+    margin: 77px;
+    position: relative;
+    /* border: 1px solid black; */
+
+}
+
+
+
+    #miniSlider > #miniGal > .miniItems > img {
+    height: 305px;
+    margin-top: 7px;
+    margin-right: -104px;
+    cursor: pointer;
+
+}
+
+    #miniSlider > #miniRight {
+    transition: 0.2s;
+
+    background: url("img/jungle/right.png") no-repeat 60% ;
+    background-size: 90%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    position: absolute;
+    top: 180px;
+    right: 0;
+}
+
+    #miniSlider > #miniLeft {
+    transition: 0.2s;
+    background: url("img/jungle/left.png") no-repeat 40%;
+    background-size: 90%;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    position: absolute;
+    top: 180px;
+    
+    left: 0;
+}
+
+/* page 3 */
+
+#gamePlay{
+    border: 1px solid#ccc;
+    width: 1200px;
+    height: 600px;
+    transform: scale(0.9);
+    margin: auto;
+
+    background: #8acee1;
+    position: relative;
+
+    overflow: hidden;
+    display: none;
+
+}
+
+
+
+
+.sky {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(img/stage/sky.jpg)repeat-x;
+    background-size: 1038px;
+    width: 300%;
+    height: 100%;
+
+    animation: moveX 40s infinite alternate ;
+
+}
+
+.rock{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background: url(img/stage/rock.png)repeat-x;
+    background-size: 1038px;
+    width: 300%;
+    height: 84%;
+
+    animation: moveX 27s infinite alternate ;
+}
+
+#ground{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    background: url(img/stage/ground.jpg)repeat-x;
+    background-size: 1408px;
+    width: 1000%;
+    height: 40%;
+
+    animation: moveX 7s infinite alternate linear;
+}
+
+
+@keyframes moveX{
+
+    0%{
+        left:0;
+    }
+
+    100%{
+        left: -200%;
+    }
+
+
+}
+      
+/* key frames */
+
